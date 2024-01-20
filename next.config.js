@@ -8,7 +8,7 @@ const nextConfig = {
 			},
 			{
 				protocol: "https",
-				hostname: "vercel.app",
+				hostname: "ecomm-mu-ashy.vercel.app",
 			},
 		],
 	},
