@@ -8,7 +8,7 @@ const nextConfig = {
 			},
 			{
 				protocol: "https",
-				hostname: "njangir.github.io",
+				hostname: "vercel.app",
 			},
 		],
 	},
