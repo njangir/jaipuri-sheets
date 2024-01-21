@@ -7,18 +7,24 @@ export const getServerSideUser = async (
 ) => {
   const token = cookies.get('payload-token')?.value
 
-  const meRes = await fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_URL}/api/users/me`,
-    {
-      headers: {
-        Authorization: `JWT ${token}`,
-      },
+  try {
+    const meRes = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/users/me`,
+      {
+        headers: {
+          Authorization: `JWT ${token}`,
+        },
+      }
+    );
+  
+    if (!meRes.ok) {
+      throw new Error(`Failed to fetch user data: ${meRes.status} - ${meRes.statusText}`);
     }
-  )
-
-  const { user } = (await meRes.json()) as {
-    user: User | null
+  
+    const { user } = await meRes.json();
+    return { user };
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+    return { user: null }; // or handle the error in a way that makes sense for your application
   }
-
-  return { user }
 }

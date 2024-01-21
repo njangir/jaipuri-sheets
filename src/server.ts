@@ -59,8 +59,7 @@ const start = async () => {
         'Next.js is building for production'
       )
 
-      // @ts-expect-error
-      await nextBuild(path.join(__dirname, '../'))
+      await nextBuild(path.join(__dirname, '../'),false,false,true,false,false,false,null,"default")
 
       process.exit()
     })
