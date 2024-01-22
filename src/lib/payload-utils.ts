@@ -21,8 +21,10 @@ export const getServerSideUser = async (
       throw new Error(`Failed to fetch user data: ${meRes.status} - ${meRes.statusText}`);
     }
   
-    const { user } = await meRes.json();
-    return { user };
+    const { user } = (await meRes.json()) as {
+      user: User | null}
+      
+    return { user }
   } catch (error) {
     console.error('Error fetching user data:', error);
     return { user: null }; // or handle the error in a way that makes sense for your application
