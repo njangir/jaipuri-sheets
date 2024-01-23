@@ -28,7 +28,7 @@ export function formatPrice(
 
 export function constructMetadata({
   title = 'Royal Rations Pet Supply',
-  description = 'Your Pet\'s Perfect Pantry!',
+  description = 'Your Pet&apos;s Perfect Pantry!',
   image = '/thumbnail.png',
   icons = '/favicon.ico',
   noIndex = false,
@@ -59,7 +59,7 @@ export function constructMetadata({
       creator: '@n.jangir',
     },
     icons,
-    metadataBase: new URL('https://digitalhippo.up.railway.app'),
+    metadataBase: new URL('https://ecomm-production-44dc.up.railway.app/'),
     ...(noIndex && {
       robots: {
         index: false,

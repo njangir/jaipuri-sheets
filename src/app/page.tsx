@@ -40,12 +40,12 @@ export default function Home() {
           <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
           Royal Rations Pet Supply{' '}
             <span className='text-blue-600'>
-              Your Pet's Perfect Pantry
+              Your Pet&apos;s Perfect Pantry
             </span>
             !
         </h1>
           <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
-          Welcome, the pet lover's haven in Jaipur! Unleash joy with our carefully curated selection of essentials, ensuring tails wag and whiskers purr. Dive into a world where quality meets convenience. Happy pets, happy you!
+          Welcome, the pet lover&apos;s haven in Jaipur! Unleash joy with our carefully curated selection of essentials, ensuring tails wag and whiskers purr. Dive into a world where quality meets convenience. Happy pets, happy you!
           </p>
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
             <Link
