@@ -5,30 +5,30 @@ import {
   buttonVariants,
 } from '@/components/ui/button'
 import {
-  ArrowDownToLine,
-  CheckCircle,
-  Leaf,
+  PackageSearch,
+  ShieldCheck,
+  Truck
 } from 'lucide-react'
 import Link from 'next/link'
 
 const perks = [
   {
-    name: 'Instant Delivery',
-    Icon: ArrowDownToLine,
+    name: 'Curated Selection',
+    Icon: PackageSearch,
     description:
-      'Get your assets delivered to your email in seconds and download them right away.',
+      'Carefully curated selection of the most used and essential items.',
   },
   {
-    name: 'Guaranteed Quality',
-    Icon: CheckCircle,
+    name: 'Trusted Brands',
+    Icon: ShieldCheck,
     description:
-      'Every asset on our platform is verified by our team to ensure our highest quality standards. Not happy? We offer a 30-day refund guarantee.',
+      'Partners of most reputable brands in India, assuring reliability and safety of the products.',
   },
   {
-    name: 'For the Planet',
-    Icon: Leaf,
+    name: 'Fast and Reliable Delivery',
+    Icon: Truck,
     description:
-      "We've pledged 1% of sales to the preservation and restoration of the natural environment.",
+      "Commited to timely and reliable delivery services. Next-day delivery available.^",
   },
 ]
 
@@ -38,16 +38,14 @@ export default function Home() {
       <MaxWidthWrapper>
         <div className='py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
           <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
-            Your marketplace for high-quality{' '}
+          Royal Rations Pet Supply{' '}
             <span className='text-blue-600'>
-              digital assets
+              Your Pet's Perfect Pantry
             </span>
-            .
-          </h1>
+            !
+        </h1>
           <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
-            Welcome to DigitalHippo. Every asset on our
-            platform is verified by our team to ensure our
-            highest quality standards.
+          Welcome, the pet lover's haven in Jaipur! Unleash joy with our carefully curated selection of essentials, ensuring tails wag and whiskers purr. Dive into a world where quality meets convenience. Happy pets, happy you!
           </p>
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
             <Link

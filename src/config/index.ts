@@ -1,41 +1,41 @@
 export const PRODUCT_CATEGORIES = [
   {
-    label: 'UI Kits',
-    value: 'ui_kits' as const,
+    label: 'For Dogs',
+    value: 'dogs' as const,
     featured: [
       {
-        name: 'Editor picks',
+        name: 'Dog Food',
         href: `/products?category=ui_kits`,
         imageSrc: '/nav/ui-kits/mixed.jpg',
       },
       {
-        name: 'New Arrivals',
+        name: 'Dog Grooming',
         href: '/products?category=ui_kits&sort=desc',
         imageSrc: '/nav/ui-kits/blue.jpg',
       },
       {
-        name: 'Bestsellers',
+        name: 'Dog Accessories',
         href: '/products?category=ui_kits',
         imageSrc: '/nav/ui-kits/purple.jpg',
       },
     ],
   },
   {
-    label: 'Icons',
-    value: 'icons' as const,
+    label: 'For Cats',
+    value: 'cats' as const,
     featured: [
       {
-        name: 'Favorite Icon Picks',
+        name: 'Cat Food',
         href: `/products?category=icons`,
         imageSrc: '/nav/icons/picks.jpg',
       },
       {
-        name: 'New Arrivals',
+        name: 'Cat Grooming',
         href: '/products?category=icons&sort=desc',
         imageSrc: '/nav/icons/new.jpg',
       },
       {
-        name: 'Bestselling Icons',
+        name: 'Cat Accessories',
         href: '/products?category=icons',
         imageSrc: '/nav/icons/bestsellers.jpg',
       },
