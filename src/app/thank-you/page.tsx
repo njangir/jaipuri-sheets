@@ -69,7 +69,7 @@ const ThankYouPage = async ({
       <div>
         <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-32 xl:gap-x-24'>
           <div className='lg:col-start-2'>
-            <p className='text-sm font-medium text-blue-600'>
+            <p className='text-sm font-medium text-amber-600'>
               Order successful
             </p>
             <h1 className='mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl'>
@@ -77,8 +77,7 @@ const ThankYouPage = async ({
             </h1>
             {order._isPaid ? (
               <p className='mt-2 text-base text-muted-foreground'>
-                Your order was processed and your assets are
-                available to download below. We&apos;ve sent
+                Your order was processed and we&apos;ve sent
                 your receipt and order details to{' '}
                 {typeof order.user !== 'string' ? (
                   <span className='font-medium text-gray-900'>
@@ -103,7 +102,7 @@ const ThankYouPage = async ({
                 {order.id}
               </div>
 
-              <ul className='mt-6 divide-y divide-gray-200 border-t border-gray-200 text-sm font-medium text-muted-foreground'>
+              {/* <ul className='mt-6 divide-y divide-gray-200 border-t border-gray-200 text-sm font-medium text-muted-foreground'>
                 {(order.products as Product[]).map(
                   (product) => {
                     const label = PRODUCT_CATEGORIES.find(
@@ -148,7 +147,7 @@ const ThankYouPage = async ({
                             <a
                               href={downloadUrl}
                               download={product.name}
-                              className='text-blue-600 hover:underline underline-offset-2'>
+                              className='text-amber-600 hover:underline underline-offset-2'>
                               Download asset
                             </a>
                           ) : null}
@@ -161,7 +160,7 @@ const ThankYouPage = async ({
                     )
                   }
                 )}
-              </ul>
+              </ul> */}
 
               <div className='space-y-6 border-t border-gray-200 pt-6 text-sm font-medium text-muted-foreground'>
                 <div className='flex justify-between'>
@@ -195,7 +194,7 @@ const ThankYouPage = async ({
               <div className='mt-16 border-t border-gray-200 py-6 text-right'>
                 <Link
                   href='/products'
-                  className='text-sm font-medium text-blue-600 hover:text-blue-500'>
+                  className='text-sm font-medium text-amber-600 hover:text-amber-500'>
                   Continue shopping &rarr;
                 </Link>
               </div>

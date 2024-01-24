@@ -8,7 +8,7 @@ const nextConfig = {
 			},
 			{
 				protocol: "https",
-				hostname: "ecomm-6nhx10e28-njangirs-projects.vercel.app",
+				hostname: "ecomm-production-44dc.up.railway.app",
 			},
 		],
 	},

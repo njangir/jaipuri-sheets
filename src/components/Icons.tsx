@@ -2,12 +2,9 @@ import { LucideProps } from 'lucide-react'
 
 export const Icons = {
   logo: (props: LucideProps) => (
-    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="623.000000pt" height="623.000000pt" viewBox="0 0 623.000000 623.000000"
+    <svg {...props} version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
  preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,623.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
+<g>
 <path d="M1595 5791 c-86 -38 -112 -100 -205 -476 -78 -314 -84 -364 -84 -645
 0 -173 5 -292 18 -405 11 -100 16 -186 12 -230 -7 -79 7 -172 34 -225 10 -19
 41 -57 69 -85 43 -41 51 -55 51 -86 0 -67 20 -143 55 -214 39 -80 39 -89 -12

@@ -37,16 +37,14 @@ const Footer = () => {
 
                 <div className='text-center relative mx-auto max-w-sm'>
                   <h3 className='font-semibold text-gray-900'>
-                    Become a seller
+                    Made in Bharat
                   </h3>
                   <p className='mt-2 text-sm text-muted-foreground'>
-                    If you&apos;d like to sell high-quality
-                    digital products, you can do so in
-                    minutes.{' '}
+                    If you&apos;d like to suggest changes to this website, please mail us{' '}
                     <Link
-                      href='/sign-in?as=seller'
+                      href='mailto://njak46.jangir@gmail.com'
                       className='whitespace-nowrap font-medium text-black hover:text-zinc-900'>
-                      Get started &rarr;
+                      here &rarr;
                     </Link>
                   </p>
                 </div>
