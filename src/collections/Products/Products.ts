@@ -155,6 +155,18 @@ export const Products: CollectionConfig = {
       label: 'Product details',
     },
     {
+      name: 'size',
+      type: 'textarea',
+      label: 'Size',
+    },
+    {
+      name: 'mrp',
+      label: 'MRP in INR',
+      min: 0,
+      max: 5000,
+      type: 'number',
+    },
+    {
       name: 'price',
       label: 'Price in INR',
       min: 0,
