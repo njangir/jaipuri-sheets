@@ -42,6 +42,7 @@ export interface Product {
   name: string;
   description?: string | null;
   price: number;
+  mrp: number;
   category: 'dogs' | 'cats';
   product_files: string | ProductFile;
   approvedForSale?: ('pending' | 'approved' | 'denied') | null;
