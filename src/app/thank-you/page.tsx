@@ -96,7 +96,7 @@ const ThankYouPage = async ({
 
             <div className='mt-16 text-sm font-medium'>
               <div className='text-muted-foreground'>
-                Order nr.
+                Order no.
               </div>
               <div className='mt-2 text-gray-900'>
                 {order.id}
