@@ -21,6 +21,9 @@ const Page = () => {
       onSuccess: ({ url }) => {
         if (url) router.push(url)
       },
+      onError: ({error}) => {
+        console.log(error)
+      },
     })
 
   const productIds = items.map(({ product }) => product.id)
