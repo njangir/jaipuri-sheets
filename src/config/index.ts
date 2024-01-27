@@ -6,17 +6,17 @@ export const PRODUCT_CATEGORIES = [
       {
         name: 'Dog Food',
         href: `/products?category=dogs`,
-        imageSrc: '/nav/ui-kits/mixed.jpg',
+        imageSrc: '/nav/dogs/dog (1).webp',
       },
       {
         name: 'Dog Grooming',
         href: '/products?category=dogs&sort=desc',
-        imageSrc: '/nav/ui-kits/blue.jpg',
+        imageSrc: '/nav/dogs/dog (3).webp',
       },
       {
         name: 'Dog Accessories',
         href: '/products?category=dogs',
-        imageSrc: '/nav/ui-kits/purple.jpg',
+        imageSrc: '/nav/dogs/dog (2).webp',
       },
     ],
   },
@@ -27,17 +27,17 @@ export const PRODUCT_CATEGORIES = [
       {
         name: 'Cat Food',
         href: `/products?category=cats`,
-        imageSrc: '/nav/icons/picks.jpg',
+        imageSrc: '/nav/cats/cat (1).webp',
       },
       {
         name: 'Cat Grooming',
         href: '/products?category=cats&sort=desc',
-        imageSrc: '/nav/icons/new.jpg',
+        imageSrc: '/nav/cats/cat (3).webp',
       },
       {
         name: 'Cat Accessories',
         href: '/products?category=cats',
-        imageSrc: '/nav/icons/bestsellers.jpg',
+        imageSrc: '/nav/cats/cat (2).webp',
       },
     ],
   },
