@@ -83,15 +83,15 @@ const Page = async ({ params }: PageProps) => {
 
             <div className='mt-4'>
               <h1 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-                {product.name}
+                {product.name + " " + product.size}
               </h1>
             </div>
 
             <section className='mt-4'>
               <div className='flex items-center'>
-                <p className='font-large text-xl text-gray-900'>
+                <p className='font-medium text-xl text-gray-900'>
                   {formatPrice(product.price) + " "}
-                  {product.mrp ? <span> /<s className='font-light text-sm'>{formatPrice(product.mrp)}</s> {(product.price/100)*(product.mrp-product.price)}%</span>:""}
+                  {product.mrp ? <><span className='font-light text-sm'>/<s>{formatPrice(product.mrp)}</s></span><span className="text-lg font-light">{(product.mrp-product.price)/product.price*100}% Off</span></>:""}
                 </p>
 
                 <div className='ml-4 border-l text-muted-foreground border-gray-300 pl-4'>
@@ -99,10 +99,15 @@ const Page = async ({ params }: PageProps) => {
                 </div>
               </div>
 
-              <div className='mt-4 space-y-6'>
+              <div className='mt-4 space-y-2'>
+                <h3 className="font-medium">Description</h3>
                 <p className='text-base text-muted-foreground'>
                   {product.description}
                 </p>
+                {product.size ? <div className="flex space-x-2 items-center">
+                  <div className="font-medium">Quantity</div>
+                  <div>{product.size}</div>
+                </div>:null}
               </div>
 
               <div className='mt-6 flex items-center'>
@@ -137,7 +142,7 @@ const Page = async ({ params }: PageProps) => {
                     className='mr-2 h-5 w-5 flex-shrink-0 text-gray-400'
                   />
                   <span className='text-muted-foreground hover:text-gray-700'>
-                    7 Day Return Guarantee  
+                    Genuine Product Guarantee
                   </span>
                 </div>
               </div>

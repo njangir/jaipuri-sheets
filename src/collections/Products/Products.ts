@@ -184,12 +184,25 @@ export const Products: CollectionConfig = {
       required: true,
     },
     {
-      name: 'product_files',
-      label: 'Product file(s)',
-      type: 'relationship',
+      name: 'type',
+      label: 'Product Type',
+      type: 'select',
       required: true,
-      relationTo: 'product_files',
-      hasMany: false,
+      defaultValue: 'food',
+      options: [
+        {
+          label: 'Food',
+          value: 'food',
+        },
+        {
+          label: 'Accessory',
+          value: 'accessory',
+        },
+        {
+          label: 'Grooming',
+          value: 'grooming',
+        },
+      ],
     },
     {
       name: 'approvedForSale',
