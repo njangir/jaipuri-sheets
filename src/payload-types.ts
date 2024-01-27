@@ -42,9 +42,10 @@ export interface Product {
   name: string;
   description?: string | null;
   price: number;
+  size: string;
   mrp: number;
   category: 'dogs' | 'cats';
-  product_files: string | ProductFile;
+  type: 'food' | 'grooming' | 'accessory';
   approvedForSale?: ('pending' | 'approved' | 'denied') | null;
   priceId?: string | null;
   stripeId?: string | null;

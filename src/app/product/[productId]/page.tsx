@@ -83,7 +83,7 @@ const Page = async ({ params }: PageProps) => {
 
             <div className='mt-4'>
               <h1 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-                {product.name + " " + product.size}
+                {product.name}{product.size?<>" "{product.size}</>:""}
               </h1>
             </div>
 
