@@ -17,6 +17,7 @@ const ProductsPage = ({
 }: ProductsPageProps) => {
   const sort = parse(searchParams.sort)
   const category = parse(searchParams.category)
+  const type = parse(searchParams.type)
 
   const label = PRODUCT_CATEGORIES.find(
     ({ value }) => value === category
@@ -28,6 +29,7 @@ const ProductsPage = ({
         title={label ?? 'Browse best quality pet supplies'}
         query={{
           category,
+          type,
           limit: 40,
           sort:
             sort === 'desc' || sort === 'asc'
