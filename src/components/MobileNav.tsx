@@ -1,13 +1,13 @@
 'use client'
 
-import { PRODUCT_CATEGORIES } from '@/config'
+import { PRODUCT_CATEGORIES } from '../config/index'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-const MobileNav = async () => {
+const MobileNav = () => {
 
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
@@ -124,13 +124,6 @@ const MobileNav = async () => {
                     className='-m-2 block p-2 font-medium text-gray-900'>
                     Cart
                 </Link>
-              </div>
-              <div className='flow-root'>
-                <div
-                    onClick={signOut}
-                    className='-m-2 block p-2 font-medium cursor-pointer'>
-                    Sign Out
-                </div>
               </div>
             </div>         
           </div>

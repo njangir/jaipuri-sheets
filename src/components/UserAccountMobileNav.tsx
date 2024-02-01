@@ -1,14 +1,15 @@
 'use client'
 
-import { PRODUCT_CATEGORIES } from '@/config'
+import { PRODUCT_CATEGORIES } from '../config/index'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { useAuth } from '../hooks/use-auth'
 
-const UserAccountMobileNav = async () => {
-
+const UserAccountMobileNav = ({ user }: { user: User }) => {
+    const { signOut } = useAuth()
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const pathname = usePathname()
