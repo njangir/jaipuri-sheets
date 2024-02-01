@@ -28,7 +28,7 @@ const perks = [
     name: 'Fast and Reliable Delivery',
     Icon: Truck,
     description:
-      "Commited to timely and reliable delivery services. Next-day delivery available.^",
+      "Commited to timely and reliable delivery services. Next-day dispatch available.^",
   },
 ]
 
@@ -37,15 +37,15 @@ export default function Home() {
     <>
       <MaxWidthWrapper>
         <div className={'py-20 mx-auto text-center flex flex-col items-center max-w-2xl'}>
-          <h1 className='text-2xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
+          <h1 className='text-xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
           खम्मा घणी!{' '}
-            <span className='text-amber-600'>
-              Buy fine quality Jaipuri Bedsheets at best price!
+            <span className='text-rose-700 font-normal'>
+              Buy fine quality Jaipuri Bedsheets at best price
             </span>
             !
         </h1>
-          <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
-            
+          <p className='mt-6 text-lg max-w-prose'>
+            We deal in finest quality Jaipuri block print bedsheets. With great pricing and affordable rates, get assured quality product delivered at your door step.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
             <Link
@@ -60,8 +60,8 @@ export default function Home() {
         </div>
 
         <ProductReel
-          query={{ sort: 'desc', limit: 4 }}
-          href='/products?sort=recent'
+          query={{ sort: 'asc', limit: 4 }}
+          href='/products'
           title='Brand new'
         />
       </MaxWidthWrapper>
@@ -74,7 +74,7 @@ export default function Home() {
                 key={perk.name}
                 className='text-center md:flex md:items-start md:text-left lg:block lg:text-center'>
                 <div className='md:flex-shrink-0 flex justify-center'>
-                  <div className='h-16 w-16 flex items-center justify-center rounded-full bg-amber-100 text-amber-900'>
+                  <div className='h-16 w-16 flex items-center justify-center rounded-full bg-rose-100 text-rose-900'>
                     {<perk.Icon className='w-1/3 h-1/3' />}
                   </div>
                 </div>

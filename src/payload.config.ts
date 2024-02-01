@@ -23,7 +23,7 @@ export default buildConfig({
     user: 'users',
     bundler: webpackBundler(),
     meta: {
-      titleSuffix: '- Royal Rations',
+      titleSuffix: '- Jaipuri Sheets',
       favicon: '/favicon.ico',
       ogImage: '/thumbnail.jpg',
     },

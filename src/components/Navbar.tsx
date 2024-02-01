@@ -26,6 +26,7 @@ const Navbar = async () => {
               <div className='ml-4 flex lg:ml-0'>
                 <Link href='/'>
                   <Icons.logo className='h-12 w-12' />
+                  <div className='font-bold'>&emsp;Jaipuri Sheets</div>
                 </Link>
               </div>
 

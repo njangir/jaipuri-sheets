@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import {ShoppingCart} from 'lucide-react'
 
 const MobileNav = () => {
 
@@ -80,17 +81,17 @@ const MobileNav = () => {
                         <div
                           key={item.name}
                           className='group relative text-sm'>
-                          <div className='relative aspect-square overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75'>
-                            <Image
-                              fill
-                              src={item.imageSrc}
-                              alt='product category image'
-                              className='object-cover object-center'
-                            />
-                          </div>
                           <Link
                             href={item.href}
                             className='mt-6 block font-medium text-gray-900'>
+                              <div className='relative aspect-square overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75'>
+                                <Image
+                                  fill
+                                  src={item.imageSrc}
+                                  alt='product category image'
+                                  className='object-cover object-center'
+                                />
+                              </div>
                             {item.name}
                           </Link>
                         </div>
@@ -122,6 +123,10 @@ const MobileNav = () => {
                     onClick={() => closeOnCurrent('/cart')}
                     href='/cart'
                     className='-m-2 block p-2 font-medium text-gray-900'>
+                    <ShoppingCart
+                      aria-hidden='true'
+                      className='h-6 w-6 flex-shrink-0 text-gray-900'
+                    />&nbsp;
                     Cart
                 </Link>
               </div>
