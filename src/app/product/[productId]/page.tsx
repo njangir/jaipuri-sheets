@@ -91,7 +91,7 @@ const Page = async ({ params }: PageProps) => {
               <div className='flex items-center'>
                 <p className='font-medium text-xl text-gray-900'>
                   {formatPrice(product.price) + " "}
-                  {product.mrp ? <><span className='font-light text-sm'>/<s>{formatPrice(product.mrp)}</s></span><span className="text-lg font-light">{(product.mrp-product.price)/product.price*100}% Off</span></>:""}
+                  {product.mrp ? <><span className='font-light text-sm'>/<s>{formatPrice(product.mrp)}</s></span>&nbsp;<span className="text-lg font-light bg-yellow-500">{Math.floor((product.mrp-product.price)/product.price*100)}% Off</span></>:""}
                 </p>
 
                 <div className='ml-4 border-l text-muted-foreground border-gray-300 pl-4'>

@@ -42,8 +42,7 @@ export interface Product {
   price: number;
   size: string;
   mrp: number;
-  category: 'dogs' | 'cats';
-  type: 'food' | 'grooming' | 'accessory';
+  category: 'jaipuribedsheet' | 'others';
   approvedForSale?: ('pending' | 'approved' | 'denied') | null;
   priceId?: string | null;
   stripeId?: string | null;
