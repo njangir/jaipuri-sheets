@@ -1,5 +1,3 @@
-'use client'
-
 import { PRODUCT_CATEGORIES } from '@/config'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
@@ -8,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { getServerSideUser } from '../lib/payload-utils'
 import { cookies } from 'next/headers'
-import { useAuth } from '@/hooks/use-auth'
+import { useAuth } from '../hooks/use-auth'
 
 const MobileNav = async () => {
 
@@ -136,13 +134,15 @@ const MobileNav = async () => {
                   Cart
                 </Link>
               </div>
+              
+            {user ? (
               <div className='flow-root'>
                 <div
                   onClick={signOut}
                   className='-m-2 block p-2 font-medium cursor-pointer'>
                   Sign Out
                 </div>
-              </div>
+              </div>):null}
             </div>
           </div>
         </div>
