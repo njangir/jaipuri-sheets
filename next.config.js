@@ -8,7 +8,7 @@ const nextConfig = {
 			},
 			{
 				protocol: "https",
-				hostname: "ecomm-production-44dc.up.railway.app",
+				hostname: "jaipuri-sheets-production.up.railway.app",
 			},
 		],
 	},

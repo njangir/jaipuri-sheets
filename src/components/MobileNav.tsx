@@ -10,7 +10,7 @@ import { getServerSideUser } from '../lib/payload-utils'
 import { cookies } from 'next/headers'
 import { useAuth } from '@/hooks/use-auth'
 
-const MobileNav = () => {
+const MobileNav = async () => {
 
   const nextCookies = cookies()
   const { user } = await getServerSideUser(nextCookies)
