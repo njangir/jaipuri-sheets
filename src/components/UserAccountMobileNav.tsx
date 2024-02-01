@@ -1,5 +1,5 @@
 'use client'
-
+import { User } from '../payload-types'
 import { PRODUCT_CATEGORIES } from '../config/index'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
@@ -110,7 +110,7 @@ const UserAccountMobileNav = ({ user }: { user: User }) => {
                 <div
                     onClick={signOut}
                     className='-m-2 block p-2 font-medium cursor-pointer'>
-                    Sign Out
+                    Sign Out &nbsp; {user.email}
                 </div>
               </div>
             </div>         
