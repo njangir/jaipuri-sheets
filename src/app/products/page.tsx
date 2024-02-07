@@ -25,7 +25,7 @@ const ProductsPage = ({
   return (
     <MaxWidthWrapper>
       <ProductReel
-        title={label ?? 'Browse best quality pet supplies'}
+        title={label ?? 'Browse best quality Jaipuri block print bedsheets'}
         query={{
           category,
           limit: 40,

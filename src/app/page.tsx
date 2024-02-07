@@ -53,7 +53,7 @@ export default function Home() {
               className={buttonVariants()}>
               Browse Trending
             </Link>
-            <Button variant='ghost'>
+            <Button variant='ghost' className="hidden">
               Contact for Bulk Orders &rarr;
             </Button>
           </div>
