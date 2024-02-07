@@ -27,8 +27,8 @@ export function formatPrice(
 }
 
 export function constructMetadata({
-  title = 'Royal Rations Pet Supply',
-  description = 'Your Pet&apos;s Perfect Pantry!',
+  title = 'Jaipuri Sheets',
+  description = 'Best quality budget Jaipuri bedsheets!',
   image = '/thumbnail.png',
   icons = '/favicon.ico',
   noIndex = false,

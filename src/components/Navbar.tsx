@@ -24,9 +24,9 @@ const Navbar = async () => {
               (<MobileNav />)}
 
               <div className='ml-4 flex lg:ml-0'>
-                <Link href='/'>
+                <Link href='/' className='flex justify-center'>
                   <Icons.logo className='h-12 w-12' />
-                  <div className='font-bold'>&emsp;Jaipuri Sheets</div>
+                  <div className='font-bold text-xl'>&emsp;Jaipuri Sheets</div>
                 </Link>
               </div>
 

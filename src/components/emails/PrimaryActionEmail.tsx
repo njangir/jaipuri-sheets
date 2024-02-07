@@ -29,7 +29,7 @@ export const EmailTemplate = ({
     <Html>
       <Head />
       <Preview>
-        The marketplace for high-quality digital goods.
+        The marketplace for high-quality traditional Jaipuri print bedsheets.
       </Preview>
       <Body style={main}>
         <Container style={container}>
@@ -37,14 +37,13 @@ export const EmailTemplate = ({
             src={`${process.env.NEXT_PUBLIC_SERVER_URL}/hippo-newsletter-sign-up.png`}
             width='150'
             height='150'
-            alt='DigitalHippo'
+            alt='Jaipuri Sheets'
             style={logo}
           />
           <Text style={paragraph}>Hi there,</Text>
           <Text style={paragraph}>
-            Welcome to DigitalHippo, the marketplace for
-            high quality digital goods. Use the button below
-            to {actionLabel}.
+            Welcome to Jaipuri Sheets, the marketplace for
+            high quality block print Jaipuri bedsheets. Click here {actionLabel}.
           </Text>
           <Section style={btnContainer}>
             <Button style={button} href={href}>
@@ -54,7 +53,7 @@ export const EmailTemplate = ({
           <Text style={paragraph}>
             Best,
             <br />
-            The DigitalHippo team
+            The Jaipuri Sheets team
           </Text>
           <Hr style={hr} />
           <Text style={footer}>

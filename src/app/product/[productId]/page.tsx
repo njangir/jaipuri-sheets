@@ -58,7 +58,7 @@ const Page = async ({ params }: PageProps) => {
         <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-8 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8'>
           
           {/* Product images */}
-          <div className='mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center'>
+          <div className='mt-10 lg:col-start-1 lg:row-span-2 lg:mt-0 lg:self-center'>
             <div className='aspect-square rounded-lg'>
               <ImageSlider urls={validUrls} />
             </div>
@@ -99,7 +99,7 @@ const Page = async ({ params }: PageProps) => {
               <div className='flex items-center'>
                 <p className='font-medium text-xl text-gray-900'>
                   {formatPrice(product.price) + " "}
-                  {product.mrp ? <><span className='font-light text-sm'>/<s>{formatPrice(product.mrp)}</s></span>&nbsp;<span className="text-lg font-medium bg-yellow-500 px-2">{Math.floor((product.mrp-product.price)/product.price*100)}% Off</span></>:""}
+                  {product.mrp ? <><span className='font-light text-sm'>/<s>{formatPrice(product.mrp)}</s></span>&nbsp;<span className="text-lg font-medium bg-yellow-500 px-2">{Math.floor(((product.mrp-product.price)*100)/product.price)}% Off</span></>:""}
                 </p>
 
                 <div className='ml-4 border-l text-muted-foreground border-gray-300 pl-4'>
@@ -131,7 +131,7 @@ const Page = async ({ params }: PageProps) => {
           </div>          
 
           {/* add to cart part */}
-          <div className='mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start'>
+          <div className='mt-10 lg:col-start-2 lg:row-start-2 lg:max-w-lg lg:self-start'>
             <div>
               <div className='mt-10'>
                 <AddToCartButton product={product} />
