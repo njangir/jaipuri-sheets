@@ -22,9 +22,10 @@ import { useEffect, useState } from 'react'
 const Cart = () => {
   const { items } = useCart()
   let count = 0
-  const itemCount = items.forEach((i)=>{
+  items.forEach((i)=>{
     count+=i.quantity
   })
+  const itemCount = count
 
   const [isMounted, setIsMounted] = useState<boolean>(false)
 
