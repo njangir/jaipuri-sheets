@@ -12,7 +12,7 @@ export type CartItem = {
 
 type CartState = {
   items: CartItem[]
-  addItem: (product: Product, quantity: Number) => void
+  addItem: (product: Product, quantity: number) => void
   removeItem: (productId: string) => void
   clearCart: () => void
 }
