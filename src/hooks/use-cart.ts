@@ -22,21 +22,24 @@ export const useCart = create<CartState>()(
     (set) => ({
       items: [],
       addItem: (product: Product, quantity: number) =>
-        set((state) => {
-          const found = false
-          for(const i in state.items.length)
-            if (state.items[i].product === product && !found){
-               state.items[i].quantity += quantity
-               found = true
-            }
-          if(!found){ 
-            state.items = [...state.items, { product: product, quantity: quantity }]
-          }
+      set((state) => {
+        let found = false;
 
-          return { 
-            items: state.items
+        state.items.forEach((item) => {
+          if (item.product.id === product.id) {
+            item.quantity += quantity;
+            found = true;
           }
-        }),
+        });
+
+        if (!found) {
+          state.items = [...state.items, { product: product, quantity: quantity }];
+        }
+
+        return {
+          items: state.items.slice()
+        };
+      }),
       removeItem: (id) =>
         set((state) => ({
           items: state.items.filter(
