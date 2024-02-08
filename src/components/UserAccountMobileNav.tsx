@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useAuth } from '../hooks/use-auth'
+import {ShoppingCart} from 'lucide-react'
 
 const UserAccountMobileNav = ({ user }: { user: User }) => {
     const { signOut } = useAuth()
