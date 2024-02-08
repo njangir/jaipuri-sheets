@@ -7,7 +7,7 @@ import {
 
 export type CartItem = {
   product: Product,
-  quantity: Number
+  quantity: number
 }
 
 type CartState = {
@@ -21,7 +21,7 @@ export const useCart = create<CartState>()(
   persist(
     (set) => ({
       items: [],
-      addItem: (product, quantity) =>
+      addItem: (product: Product, quantity: number) =>
         set((state) => {
           return { items: [...state.items, { product: product, quantity: quantity }] }
         }),

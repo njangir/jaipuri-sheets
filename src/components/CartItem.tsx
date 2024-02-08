@@ -5,7 +5,7 @@ import { Product } from '@/payload-types'
 import { ImageIcon, X } from 'lucide-react'
 import Image from 'next/image'
 
-const CartItem = ({ product, quantity }: { product: Product, quantity: Number }) => {
+const CartItem = ({ product, quantity }: { product: Product, quantity: number }) => {
   const { image } = product.images[0]
 
   const { removeItem } = useCart()
