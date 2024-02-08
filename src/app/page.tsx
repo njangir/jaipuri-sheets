@@ -13,16 +13,16 @@ import Link from 'next/link'
 
 const perks = [
   {
-    name: 'Curated Selection',
-    Icon: PackageSearch,
-    description:
-      'Carefully curated selection of the most used and essential items.',
-  },
-  {
-    name: 'Trusted Brands',
+    name: 'Authenticity Guarantee',
     Icon: ShieldCheck,
     description:
-      'Partners of most reputable brands in India, assuring reliability and safety of the products.',
+      'Shop with confidence knowing that each of our Jaipuri Block Print Bedsheets is meticulously handcrafted in Jaipur, ensuring the highest quality and authenticity.',
+  },
+  {
+    name: 'Customer-First Approach',
+    Icon: PackageSearch,
+    description:
+      'Join our community of satisfied customers who rave about the luxurious comfort and stunning beauty of our Jaipuri Block Print Bedsheets. Your satisfaction is our top priority!',
   },
   {
     name: 'Fast and Reliable Delivery',
@@ -40,12 +40,12 @@ export default function Home() {
           <h1 className='text-xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
           खम्मा घणी!{' '}
             <span className='text-rose-700 font-normal'>
-              Buy fine quality Jaipuri Bedsheets at best price
+              Buy fine quality <b>Jaipuri Bedsheets</b> at best price
             </span>
             !
         </h1>
           <p className='mt-6 text-lg max-w-prose'>
-            We deal in finest quality Jaipuri block print bedsheets. With great pricing and affordable rates, get assured quality product delivered at your door step.
+            We deal in finest quality <b>Jaipuri block print</b> bedsheets. With great pricing and <b>affordable</b> rates, get assured <b>quality</b> product delivered at your door step.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
             <Link

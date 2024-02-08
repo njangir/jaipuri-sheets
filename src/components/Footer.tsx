@@ -47,6 +47,7 @@ const Footer = () => {
                       here &rarr;
                     </Link>
                   </p>
+                  <p>Contact: <b>+919529418111</b></p>
                 </div>
               </div>
             </div>
