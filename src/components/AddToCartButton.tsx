@@ -9,7 +9,7 @@ const AddToCartButton = ({
   product, quantity
 }: {
   product: Product,
-  quantity: Number
+  quantity: number
 }) => {
   const { addItem } = useCart()
   const [isSuccess, setIsSuccess] = useState<boolean>(false)
