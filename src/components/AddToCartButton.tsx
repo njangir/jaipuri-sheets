@@ -12,8 +12,8 @@ const AddToCartButton = ({
 }) => {
   const { addItem } = useCart()
   const [isSuccess, setIsSuccess] = useState<boolean>(false)
-  
-  const [quantity, setQuantity] = useState<boolean>(1)
+
+  const [quantity, setQuantity] = useState<number>(1)
 
   useEffect(() => {
     const timeout = setTimeout(() => {
