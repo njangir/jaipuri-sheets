@@ -2,14 +2,12 @@ import AddToCartButton from '@/components/AddToCartButton'
 import ImageSlider from '@/components/ImageSlider'
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import ProductReel from '@/components/ProductReel'
-import { Button } from '@/components/ui/button'
 import { PRODUCT_CATEGORIES } from '@/config'
 import { getPayloadClient } from '@/get-payload'
 import { formatPrice } from '@/lib/utils'
 import { Check, Shield } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { useState } from 'react'
 
 interface PageProps {
   params: {
@@ -146,16 +144,7 @@ const Page = async ({ params }: PageProps) => {
           <div className='mt-10 lg:col-start-2 lg:row-start-2 lg:max-w-lg lg:self-start'>
             <div>
               <div className='mt-10 flex justify-center items-center'>
-                {/* <div className='flex justify-center items-center'>
-                  <Button onClick={()=>setQuantity(quantity-1)} variant="secondary" size="icon">
-                    m
-                  </Button>
-                  <span className="text-lg w-10 text-center">{quantity}</span>                  
-                  <Button onClick={()=>setQuantity(quantity+1)} variant="secondary" size="icon">
-                    a
-                  </Button>
-                </div> */}
-                <AddToCartButton product={product} quantity={1}/>
+                <AddToCartButton product={product} />
               </div>
               <div className='mt-6 text-center'>
                 <div className='group inline-flex text-sm text-medium'>

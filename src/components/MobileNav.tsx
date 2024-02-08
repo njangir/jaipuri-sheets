@@ -122,12 +122,12 @@ const MobileNav = () => {
                 <Link
                     onClick={() => closeOnCurrent('/cart')}
                     href='/cart'
-                    className='-m-2 block p-2 font-medium text-gray-900'>
+                    className='-m-2 block p-2 font-medium text-gray-900 flex'>
+                      Cart&nbsp;
                     <ShoppingCart
                       aria-hidden='true'
                       className='h-6 w-6 flex-shrink-0 text-gray-900'
-                    />&nbsp;
-                    Cart
+                    />                    
                 </Link>
               </div>
             </div>         
