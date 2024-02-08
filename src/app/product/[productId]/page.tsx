@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 import { PRODUCT_CATEGORIES } from '@/config'
 import { getPayloadClient } from '@/get-payload'
 import { formatPrice } from '@/lib/utils'
-import { Check, Shield, Plus } from 'lucide-react'
+import { Check, Shield } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { useState } from 'react'
@@ -148,11 +148,11 @@ const Page = async ({ params }: PageProps) => {
           <div className='mt-10 lg:col-start-2 lg:row-start-2 lg:max-w-lg lg:self-start'>
             <div>
               <div className='mt-10 flex justify-center items-center'>
-                <div>
+                <div className='flex justify-center items-center'>
                   <Button onClick={()=>setQuantity(quantity-1)} variant="secondary" size="icon">
                     -
                   </Button>
-                  <span className="text-lg">{quantity}</span>                  
+                  <span className="text-lg w-10 text-center">{quantity}</span>                  
                   <Button onClick={()=>setQuantity(quantity+1)} variant="secondary" size="icon">
                     +
                   </Button>
