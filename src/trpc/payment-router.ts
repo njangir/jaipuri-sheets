@@ -74,7 +74,7 @@ export const paymentRouter = router({
 
       mappedProducts.forEach((prod)=>{
         line_items.push({
-          price: prod.priceId,
+          price: prod.priceId!,
           quantity: prod.quantity
         })
       })
