@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useAuth } from '../hooks/use-auth'
 import {ShoppingCart} from 'lucide-react'
+import { Separator } from './ui/separator'
 
 const UserAccountMobileNav = ({ user }: { user: User }) => {
     const { signOut } = useAuth()
@@ -100,23 +101,24 @@ const UserAccountMobileNav = ({ user }: { user: User }) => {
             </div>
             <div className='space-y-6 border-t border-gray-200 px-4 py-6'>   
               <div className='flow-root'>
-                <div
-                    onClick={signOut}
-                    className='-m-2 block p-2 font-medium cursor-pointer'>
-                    Sign Out &nbsp; {user.email}
-                </div> 
                 <div className='flow-root'>
                   <Link
                       onClick={() => closeOnCurrent('/cart')}
                       href='/cart'
                       className='-m-2 block p-2 font-medium text-gray-900 flex'>
-                      Cart
+                      Cart&nbsp;
                       <ShoppingCart
                         aria-hidden='true'
-                        className='h-6 w-6 flex-shrink-0 text-gray-900'
+                        className='h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500'
                       />
                   </Link>
                 </div>
+                <Separator/>
+                <div
+                    onClick={signOut}
+                    className='-m-2 block p-2 font-medium cursor-pointer'>
+                    Sign Out &nbsp; {user.email}
+                </div> 
               </div>
             </div>         
           </div>
