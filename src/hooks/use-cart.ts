@@ -6,12 +6,13 @@ import {
 } from 'zustand/middleware'
 
 export type CartItem = {
-  product: Product
+  product: Product,
+  quantity: Number
 }
 
 type CartState = {
   items: CartItem[]
-  addItem: (product: Product) => void
+  addItem: (product: Product, quantity: Number) => void
   removeItem: (productId: string) => void
   clearCart: () => void
 }
@@ -20,9 +21,9 @@ export const useCart = create<CartState>()(
   persist(
     (set) => ({
       items: [],
-      addItem: (product) =>
+      addItem: (product, quantity) =>
         set((state) => {
-          return { items: [...state.items, { product }] }
+          return { items: [...state.items, { product: product, quantity: quantity }] }
         }),
       removeItem: (id) =>
         set((state) => ({

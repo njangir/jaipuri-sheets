@@ -109,15 +109,22 @@ const Page = async ({ params }: PageProps) => {
 
               <div className='mt-4 space-y-2'>
                 <h3 className="font-medium">Description</h3>
-                <p className='text-base text-muted-foreground'>
+                <pre className='text-base text-muted-foreground'>
                   {product.description}
-                </p>
+                </pre>
                 {product.size ? <div className="flex space-x-2 items-center">
-                  <div className="font-medium">Quantity</div>
+                  <div className="font-medium">Size: </div>
                   <div>{product.size}</div>
                 </div>:null}
+                <div className="flex space-x-2 items-center">
+                  <div className="font-medium">Material: </div>
+                  <div>Pure Cotton</div>
+                </div>
+                <div className="flex space-x-2 items-center">
+                  <div className="font-medium">Care: </div>
+                  <div>Easy to wash and maintain</div>
+                </div>
               </div>
-
               <div className='mt-6 flex items-center'>
                 <Check
                   aria-hidden='true'
@@ -128,13 +135,13 @@ const Page = async ({ params }: PageProps) => {
                 </p>
               </div>
             </section>
-          </div>          
+          </div>
 
           {/* add to cart part */}
           <div className='mt-10 lg:col-start-2 lg:row-start-2 lg:max-w-lg lg:self-start'>
             <div>
               <div className='mt-10'>
-                <AddToCartButton product={product} />
+                <AddToCartButton product={product} quantity={1}/>
               </div>
               <div className='mt-6 text-center'>
                 <div className='group inline-flex text-sm text-medium'>

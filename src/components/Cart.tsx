@@ -30,7 +30,7 @@ const Cart = () => {
   }, [])
 
   const cartTotal = items.reduce(
-    (total, { product }) => total + product.price,
+    (total, { product, quantity }) => total + product.price*quantity,
     0
   )
 
@@ -55,9 +55,10 @@ const Cart = () => {
           <>
             <div className='flex w-full flex-col pr-6'>
               <ScrollArea>
-                {items.map(({ product }) => (
+                {items.map(({ product, quantity }) => (
                   <CartItem
                     product={product}
+                    quantity={quantity}
                     key={product.id}
                   />
                 ))}

@@ -11,12 +11,13 @@ import type Stripe from 'stripe'
 
 export const paymentRouter = router({
   createSession: privateProcedure
-    .input(z.object({ productIds: z.array(z.string()) }))
+    .input(z.object({ productsInCart: z.array(z.object({productId: z.string(), quantity: z.number()})) }))
     .mutation(async ({ ctx, input }) => {
       const { user } = ctx
-      let { productIds } = input
+      let { productsInCart } = input
+      let productIds = productsInCart.map((item)=>item.productId)
 
-      if (productIds.length === 0) {
+      if (productsInCart.length === 0) {
         throw new TRPCError({ code: 'BAD_REQUEST' })
       }
 
@@ -34,6 +35,22 @@ export const paymentRouter = router({
       const filteredProducts = products.filter((prod) =>
         Boolean(prod.priceId)
       )
+      
+      const mappedProducts:{priceId: string, quantity: number}[] = []
+
+      let map = new Map<string, number>()
+      for (const item of productsInCart) {
+        map.set(item.productId, item.quantity);
+      }
+
+      for (const pid of filteredProducts){
+        if(map.has(pid.id)){
+          mappedProducts.push({
+            priceId: pid.priceId,
+            quantity: map.get(pid.id)
+          })
+        }
+      }
 
       const order = await payload.create({
         collection: 'orders',
@@ -47,10 +64,17 @@ export const paymentRouter = router({
       const line_items: Stripe.Checkout.SessionCreateParams.LineItem[] =
         []
 
-      filteredProducts.forEach((product) => {
+      /* filteredProducts.forEach((product) => {
         line_items.push({
           price: product.priceId!,
           quantity: 1,
+        })
+      }) */
+
+      mappedProducts.forEach((prod)=>{
+        line_items.push({
+          price: prod.priceId,
+          quantity: prod.quantity
         })
       })
 

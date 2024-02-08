@@ -5,7 +5,7 @@ import { Product } from '@/payload-types'
 import { ImageIcon, X } from 'lucide-react'
 import Image from 'next/image'
 
-const CartItem = ({ product }: { product: Product }) => {
+const CartItem = ({ product, quantity }: { product: Product, quantity: Number }) => {
   const { image } = product.images[0]
 
   const { removeItem } = useCart()
@@ -58,7 +58,7 @@ const CartItem = ({ product }: { product: Product }) => {
 
         <div className='flex flex-col space-y-1 font-medium'>
           <span className='ml-auto line-clamp-1 text-sm'>
-            {formatPrice(product.price)}
+            {formatPrice(product.price)} x {quantity}
           </span>
         </div>
       </div>

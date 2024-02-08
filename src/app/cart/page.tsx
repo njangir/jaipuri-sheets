@@ -23,7 +23,7 @@ const Page = () => {
       },
     })
 
-  const productIds = items.map(({ product }) => product.id)
+  const productsInCart:{productId: string, quantity: number}[] = items.map(({ product, quantity }) => ({productId: product.id, quantity: quantity}))
 
   const [isMounted, setIsMounted] = useState<boolean>(false)
   useEffect(() => {
@@ -31,7 +31,7 @@ const Page = () => {
   }, [])
 
   const cartTotal = items.reduce(
-    (total, { product }) => total + product.price,
+    (total, { product, quantity }) => total + product.price * quantity,
     0
   )
 
@@ -81,7 +81,7 @@ const Page = () => {
                   isMounted && items.length > 0,
               })}>
               {isMounted &&
-                items.map(({ product }) => {
+                items.map(({ product, quantity }) => {
                   const label = PRODUCT_CATEGORIES.find(
                     (c) => c.value === product.category
                   )?.label
@@ -126,7 +126,7 @@ const Page = () => {
                             </div>
 
                             <p className='mt-1 text-sm font-medium text-gray-900'>
-                              {formatPrice(product.price)}
+                              {formatPrice(product.price)} x {quantity}
                             </p>
                           </div>
 
@@ -211,7 +211,7 @@ const Page = () => {
               <Button
                 disabled={items.length === 0 || isLoading}
                 onClick={() =>
-                  createCheckoutSession({ productIds })
+                  createCheckoutSession({ productsInCart })
                 }
                 className='w-full'
                 size='lg'>
