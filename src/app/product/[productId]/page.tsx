@@ -112,7 +112,7 @@ const Page = async ({ params }: PageProps) => {
 
               <div className='mt-4 space-y-2'>
                 <h3 className="font-medium">Description</h3>
-                <pre className='text-base text-muted-foreground whitespace-pre-wrap'>
+                <pre className='text-sm font-sans text-muted-foreground whitespace-pre-wrap'>
                   {product.description}
                 </pre>
                 {product.size ? <div className="flex space-x-2 items-center">
