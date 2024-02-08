@@ -8,6 +8,7 @@ import { TRPCError } from '@trpc/server'
 import { getPayloadClient } from '../get-payload'
 import { stripe } from '../lib/stripe'
 import type Stripe from 'stripe'
+import { Product } from '@/payload-types'
 
 export const paymentRouter = router({
   createSession: privateProcedure
@@ -32,11 +33,11 @@ export const paymentRouter = router({
         },
       })
 
-      const filteredProducts = products.filter((prod) =>
+      const filteredProducts: Product[] = products.filter((prod) =>
         Boolean(prod.priceId)
       )
       
-      const mappedProducts:{priceId: string, quantity: number}[] = []
+      const mappedProducts:{priceId: string|null|undefined, quantity: number|undefined}[] = []
 
       let map = new Map<string, number>()
       for (const item of productsInCart) {
