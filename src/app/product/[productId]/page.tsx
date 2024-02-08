@@ -2,12 +2,14 @@ import AddToCartButton from '@/components/AddToCartButton'
 import ImageSlider from '@/components/ImageSlider'
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import ProductReel from '@/components/ProductReel'
+import { Button } from '@/components/ui/button'
 import { PRODUCT_CATEGORIES } from '@/config'
 import { getPayloadClient } from '@/get-payload'
 import { formatPrice } from '@/lib/utils'
-import { Check, Shield } from 'lucide-react'
+import { Check, Shield, Plus } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { useState } from 'react'
 
 interface PageProps {
   params: {
@@ -21,6 +23,9 @@ const BREADCRUMBS = [
 ]
 
 const Page = async ({ params }: PageProps) => {
+
+  const [quantity, setQuantity] = new useState<number>(1)
+
   const { productId } = params
 
   const payload = await getPayloadClient()
@@ -109,7 +114,7 @@ const Page = async ({ params }: PageProps) => {
 
               <div className='mt-4 space-y-2'>
                 <h3 className="font-medium">Description</h3>
-                <pre className='text-base text-muted-foreground'>
+                <pre className='text-base text-muted-foreground whitespace-pre-wrap'>
                   {product.description}
                 </pre>
                 {product.size ? <div className="flex space-x-2 items-center">
@@ -140,8 +145,17 @@ const Page = async ({ params }: PageProps) => {
           {/* add to cart part */}
           <div className='mt-10 lg:col-start-2 lg:row-start-2 lg:max-w-lg lg:self-start'>
             <div>
-              <div className='mt-10'>
-                <AddToCartButton product={product} quantity={1}/>
+              <div className='mt-10 flex justify-center items-center'>
+                <div>
+                  <Button onClick={()=>setQuantity(quantity-1)} variant="secondary" size="icon">
+                    -
+                  </Button>
+                  <span className="text-lg">{quantity}</span>                  
+                  <Button onClick={()=>setQuantity(quantity+1)} variant="secondary" size="icon">
+                    +
+                  </Button>
+                </div>
+                <AddToCartButton product={product} quantity={quantity}/>
               </div>
               <div className='mt-6 text-center'>
                 <div className='group inline-flex text-sm text-medium'>
