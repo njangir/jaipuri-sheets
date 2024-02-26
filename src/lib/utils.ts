@@ -59,7 +59,7 @@ export function constructMetadata({
       creator: '@n.jangir',
     },
     icons,
-    metadataBase: new URL('https://ecomm-production-44dc.up.railway.app/'),
+    metadataBase: new URL('https://main.d2n1gnvnee9zu1.amplifyapp.com/'),
     ...(noIndex && {
       robots: {
         index: false,
