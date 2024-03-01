@@ -59,7 +59,7 @@ export function constructMetadata({
       creator: '@n.jangir',
     },
     icons,
-    metadataBase: new URL('https://main.d2n1gnvnee9zu1.amplifyapp.com/'),
+    metadataBase: new URL('https://jaipuri-sheets.web.app/'),
     ...(noIndex && {
       robots: {
         index: false,
