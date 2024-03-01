@@ -8,7 +8,7 @@ const nextConfig = {
 			},
 			{
 				protocol: "https",
-				hostname: "main.d2n1gnvnee9zu1.amplifyapp.com",
+				hostname: "jaipuri-sheets.web.app",
 			},
 		],
 	},
