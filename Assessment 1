@@ -1,0 +1,70 @@
+Ans 1:
+
+  import math
+  radi = float(input("insert radius: "))
+  print("Area will be: ", math.pi*radi*radi)
+
+Ans 2:
+
+  import math
+  ftemp = float(input("Enter temperature in Fahrenhiet: "))
+  print("Temperature in Celsius is: ", ftemp-32*(5/9))
+
+Ans 3:
+
+  a = int(input("Enter first number: "))
+  b = int(input("Enter second number: "))
+  c = int(input('''Select the operator:
+      1 = Sum
+      2 = Sub
+      3 = Multiply
+      4 = Divide: '''))
+  if(c==1):
+      print("Result: ", a+b)
+  elif(c==2):
+      print("Result: ", a-b)
+  elif(c==3):
+      print("Result: ", a*b)
+  elif(c==4):
+      print("Result: ", a/b)
+
+Ans 4: 
+  import math
+  num = int(input("Enter number to find square root: "))
+  print("Square root of {} is {}".format(num, math.sqrt(num)))
+
+Ans 5: 
+  import cmath
+  a = int(input("Enter value a: "))
+  b = int(input("Enter value b: "))
+  c = int(input("Enter value c: "))
+  part1 = b**2-4*a*c
+  if(part1 >= 0):
+      result1 = (-b+cmath.sqrt(part1))/2*a
+      result2 = (-b-cmath.sqrt(part1))/2*a
+      print("Results are: ", result1, " & ", result2)
+  else:
+      print("imagenary root")
+
+Ans 6:
+  import math
+  a = int(input("Enter side a: "))
+  b = int(input("Enter side b: "))
+  c = int(input("Enter side c: "))
+  
+  s = (a+b+c)/2
+  print(s)
+  print("area of triangle is: ", math.sqrt(s*(s-a)*(s-b)*(s-c)), "sq")
+
+Ans 7:
+  a = str(input("Enter 5 digit number: "))
+  sum = int(a[0])+int(a[1])+int(a[2])+int(a[3])+int(a[4])
+  print(sum)
+
+Ans 8:
+  string = '''twinkle twinkle little star, how I wonder what you are!
+  Up above'''
+  print(string[:string.find("!")])
+
+Ans 9:
+  print(name + "\n" + age + "\n" + address)
